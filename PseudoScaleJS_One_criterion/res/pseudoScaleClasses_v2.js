@@ -385,15 +385,7 @@ class PseudoScaleTask{
             }
         );
 
-        this.visualCriterion.addEventListener("mouseenter", () => {
-            if(this.dragging) return;
-            document.documentElement.style.cursor = "grab";
-        });
-
-        this.visualCriterion.addEventListener("mouseleave", () => {
-            if(this.dragging) return;
-            document.documentElement.style.cursor = "default";
-        });
+        this.visualCriterion.classList.add("criterion");
 
         this.visualCriterion.addEventListener("mousedown", () => {
             if(this.state != this.states.waitingForClick) return;
@@ -480,8 +472,8 @@ class PseudoScaleTask{
                     y : e.clientY
                 }
             ).y;
-            this.visualCriterion.setAttribute("y1", y);
-            this.visualCriterion.setAttribute("y2", y);
+            this.elementToDrag.setAttribute("y1", y);
+            this.elementToDrag.setAttribute("y2", y);
         }
     }
 
