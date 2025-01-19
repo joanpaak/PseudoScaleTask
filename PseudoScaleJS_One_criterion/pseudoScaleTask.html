@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudo-scale Task</title>
+        <link rel="stylesheet" href="res/pseudoScaleStyle.css">
+    </head>
+    <body>
+        <div id="screenContainer">
+            <div id="welcomeScreen">
+                <h1>Greetings</h1>
+
+                <div class="textBlock">
+
+                    <p>In this task you get to explore how small differences in frequency (pitch) you are able to hear.</p>
+    
+                    <p>During the experimental task you will be presented with a screen like this:</p>
+    
+                    <div class="centering">
+                        <img src="res/screen.png" alt="This should display a picture of the interface">
+                    </div>
+    
+                    <p>By clicking on <span class="highlight">lower part</span> (grey) the screen you will be presented with a stimulus. Each stimulus is a pair of pure tones, the first of which is always the same across all stimuli but the second may be higher than the first. Your task is to try to detect if there was a difference between them.</p>
+    
+                    <p>There is a practice task during which you have the chance to acquaint yourself with how the stimuli sound.</p>
+
+                    <p>Responses are given by clicking <span class="highlight">Yes</span> or <span class="highlight">No</span> in a dialog box that will open near where you clicked:</p>
+
+                    <div class="centering">
+                        <img src="res/screen2.png" alt="There should be a picture of the response box">
+                    </div>
+    
+                    <p>Unlike in a typical task of this kind, you have a say in how large frequency differences will be presented to you. The <span class="highlight">higher</span> you click on the screen the <span class="highlight">larger</span> the frequency difference will be; horizontal location does not affect the stimulus in any way. But there's a catch&mdash;quite literally!</p>
+    
+                    <p>Every now and then you will be presented with random <span class="highlight">catch trials</span>. During these trials there is either</p> 
+                    
+                    <ol>
+                        <li>no difference between the tones, or</li>
+                        <li>a random difference that is smaller than what you picked.</li>
+                    </ol>
+                        
+                    <p>This is so that you, as a participant, would have to use your ears and not just your eyes in the task, and so that there would be some challenge to it. But in any case: keep your ears peeled on <span class="highlight">each</span> trial!</p>
+    
+                    <p>During the task you should also be moving the red horizontal bar by dragging it: double tap and hold if you are using a touchpad or just hold down the left mouse button to get a hold of the bar. You should try to drag it as close as possible to where you think your threshold for detecting frequency differences lies. But there's a catch here too!</p>
+    
+                    <p>Below a random point on the screen the frequency difference will <span class="highlight">always be zero</span>. So when you are moving the threshold bar around, be careful that you don't place it below that point. Try to aim at a point where you can be about 50/50 sure about detecting differences.</p>
+    
+                    <p>There are five repetitions of the task. In each task the above mentioned random point will be different, so be vigilant on each repetition. The task is relatively fast to complete so this shouldn't take too long. You can choose yourself how much time you use per task, but I would recommend listening to at least 20 stimuli per task.</p>
+    
+                    <p>When you are ready to begin a practice task, click the button below.</p>
+    
+                    <div class="centering">
+                        <button id="beginPracticeBtn">Begin Practice</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="practiceScreen">
+                <div class="counterDiv">Current task: 1/1</div>
+                <div class="buttonDiv">
+                    <button id="endPracticeBtn">End</button>
+                </div>
+
+            </div>
+
+            <div id="intermissionScreen">
+                <h1>Practice done</h1>
+
+                <div class="textBlock">
+                    <p>When you are ready, click on the button below to begin the experiment proper. In the experiment there are five repetitions, and you can move to the next by clicking on the button that says <span class="highlight">next</span>. Click on this button also after the last task. When you are done, you should see a screen thanking you for your participation.</p>
+    
+                    <div class="centering">
+                        <button id="beginExpBtn">Begin Experiment</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="experimentScreen">
+                <div class="counterDiv">Current task: <span id="taskCounter">1/5</span></div>
+                <div class="buttonDiv">
+                    <button id="nextTaskBtn">Next ≫</button>
+                </div>
+            </div>
+
+            <div id="goodbyeScreen">
+                <h1>Thank you</h1>
+
+                <div class="textBlock">
+                    <p>Thank you for your participation.</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            &copy; Joni Pääkkö
+        </footer>
+    </body>
+    <script src="res/pseudoScaleClasses_v2.js"></script>
+</html>
