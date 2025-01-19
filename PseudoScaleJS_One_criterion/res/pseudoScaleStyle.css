@@ -79,3 +79,11 @@ footer{
     padding: 5rem 0;
     font-size: 1.25rem;
 }
+
+.criterion:hover{
+    cursor: grab;
+}
+
+.criterion:active{
+    cursor: grabbing;
+}
